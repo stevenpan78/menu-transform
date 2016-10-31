@@ -11,7 +11,12 @@ body {
     margin: 0 auto;
     width: 75%;
 }
-
+.dropdown-content{
+    display: none;
+}
+.mydiv ul li:hover ul{
+    display: inline;
+}
 .mydiv ul {
     margin: 0;
     padding: 0;
@@ -28,11 +33,11 @@ body {
     text-align: center;
 }
 
-.dropdown-content li:hover:nth-child(odd) {
+.mydiv ul ul > li:hover:nth-child(odd) {
     -webkit-transform: skewX(45deg) translateX(45px);
 }
 
-.dropdown-content li:hover:nth-child(even) {
+.mydiv ul ul > li:hover:nth-child(even) {
     -webkit-transform: skewX(-45deg) translateX(-45px);
 }
 
@@ -45,15 +50,11 @@ body {
   transition: .2s ease -webkit-transform;
   overflow: hidden;
   content: '';
-    box-shadow: 0 0 50px rgba(0, 0, 0, .9);
-    transition: .2s ease -webkit-transform;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+  transition: .2s ease -webkit-transform;
 }
 
 .mydiv li a:hover:not(.active) {
     background-color: #fff333;
     color: white;
-}
-
-.dropdown-content li > a {
-    display: block;
 }
